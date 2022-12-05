@@ -12,3 +12,15 @@ class RoomListSerializer(ModelSerializer):
             'check_in',
             'check_out'
         ]
+
+class RoomCreateSerializer(ModelSerializer):
+     class Meta:
+        model = Room
+        fields = [
+            'id',
+            'room_num',
+            'check_in',
+            'guest',
+            'check_in',
+            'check_out'
+        ]
