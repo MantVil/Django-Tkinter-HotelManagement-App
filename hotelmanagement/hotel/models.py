@@ -10,4 +10,4 @@ class Room(models.Model):
     check_out = models.DateField(null=True)
 
     def __str__(self) -> str:
-        return self.room_num
+        return str(self.room_num)
