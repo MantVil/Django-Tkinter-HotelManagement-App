@@ -16,6 +16,6 @@ class RoomDetailAPIView(RetrieveAPIView):
     queryset =  Room.objects.all()
     serializer_class = RoomDetailSerializer
 
-# class RoomUpdateAPIView(UpdateAPIView):
-#     queryset = Room.objects.all()
-#     serializer_class = RoomUpdateSerializer
+class RoomUpdateAPIView(UpdateAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomDetailSerializer
