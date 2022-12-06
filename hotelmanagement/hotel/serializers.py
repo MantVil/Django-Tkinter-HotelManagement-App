@@ -36,3 +36,15 @@ class RoomDetailSerializer(ModelSerializer):
             'check_in',
             'check_out'
         ]
+
+class RoomDeleteSerializer(ModelSerializer):
+     class Meta:
+        model = Room
+        fields = [
+            'id',
+            'room_num',
+            'check_in',
+            'guest',
+            'check_in',
+            'check_out'
+        ]

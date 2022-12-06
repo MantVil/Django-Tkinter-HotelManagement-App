@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView
 from .models import Room
 from .serializers import RoomListSerializer, RoomCreateSerializer, RoomDetailSerializer
 # Create your views here.
@@ -17,5 +17,9 @@ class RoomDetailAPIView(RetrieveAPIView):
     serializer_class = RoomDetailSerializer
 
 class RoomUpdateAPIView(UpdateAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomDetailSerializer
+
+class RoomDeleteAPIView(DestroyAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomDetailSerializer
